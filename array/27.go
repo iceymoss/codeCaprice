@@ -1,5 +1,6 @@
 package array
 
+// 27. 移除元素
 func removeElement(nums []int, val int) int {
 	//暴力法
 	ans := 0
