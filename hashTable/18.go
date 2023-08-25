@@ -3,9 +3,8 @@ package hashTable
 import "sort"
 
 func fourSum(nums []int, target int) [][]int {
-	//思路：先排序，方便去重，定一，次定一，移二(双指针）
+	//思路：先排序，方便去重，定一，次定一，移二(双指针）a = nums[i], b = nums[j], c = nums[l], d = nums[r]
 	var ans [][]int
-	//a = nums[i], b = nums[j], c = nums[l], d = nums[r]
 	sort.Ints(nums)
 	for i := 0; i < len(nums)-3; i++ { //注意数组越界
 		if target <= 0 && nums[0] > 0 {
@@ -27,6 +26,7 @@ func fourSum(nums []int, target int) [][]int {
 				n3, n4 := nums[l], nums[r]
 				if n1+n2+n3+n4 == target {
 					ans = append(ans, []int{n1, n2, n3, n4})
+					//nums[l],nums[r]去重
 					for l < r && n3 == nums[l] {
 						l++
 					}
