@@ -45,3 +45,44 @@ func threeSum(nums []int) [][]int {
 
 	return result
 }
+
+func threeSumV2(nums []int) [][]int {
+	//先排序，为了更好的去重， 定一动二，双指针，也可以理解为三指针法
+	sort.Ints(nums)
+	var ans [][]int
+	//a+b+c = 0
+	//a = nums[i] b = nums[i+1] c = nums[len(nums)-1]
+	for i := 0; i < len(nums)-2; i++ {
+		if nums[0] > 0 {
+			break
+		}
+
+		//nums[i]去重
+		if i > 0 && nums[i] == nums[i-1] {
+			continue
+		}
+		n1 := nums[i]
+
+		//双指针法
+		l, r := i+1, len(nums)-1
+		for l < r {
+			n2, n3 := nums[l], nums[r]
+			if n1+n2+n3 == 0 {
+				ans = append(ans, []int{n1, n2, n3})
+				//l，r去重, 如果当前符合条件后，当前条件下：n1使用，n2使用，n3使用，所以如果n2或者n3不能再出现和上一层相同的值了
+				for l < r && nums[l] == n2 {
+					l++
+				}
+				for l < r && nums[r] == n3 {
+					r--
+				}
+
+			} else if n1+n2+n3 > 0 {
+				r--
+			} else {
+				l++
+			}
+		}
+	}
+	return ans
+}
