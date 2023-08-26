@@ -9,4 +9,5 @@ func main() {
 	arr := []byte("iceymoss")
 	String.ReverseString(arr)
 	fmt.Println(string(arr))
+	fmt.Println(String.RepeatedSubstringPattern("abcabcabcd"))
 }
