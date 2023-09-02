@@ -1,5 +1,7 @@
 package towPointer
 
+import "math"
+
 //剑指 Offer 05. 替换空格
 
 func replaceSpace(s string) string {
@@ -14,4 +16,14 @@ func replaceSpace(s string) string {
 		}
 	}
 	return string(ans)
+}
+
+func test(arr []int) int {
+	max := math.MinInt
+	for i := 0; i < len(arr); i++ {
+		if arr[i] > max {
+			max = arr[i]
+		}
+	}
+	return max
 }
