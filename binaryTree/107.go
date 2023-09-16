@@ -10,8 +10,6 @@ func levelOrderBottom(root *TreeNode) [][]int {
 		return ans
 	}
 	arr := make([]stack, 0)
-	//队列
-
 	queue := make([]*TreeNode, 0)
 	queue = append(queue, root)
 	for len(queue) > 0 {
