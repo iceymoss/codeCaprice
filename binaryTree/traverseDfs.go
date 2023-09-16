@@ -5,13 +5,6 @@ import (
 	"fmt"
 )
 
-// TreeNode 定义二叉树
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
-
 // TODO 递归版
 func perTraverse(root *TreeNode) {
 	//终止条件
