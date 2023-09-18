@@ -1,5 +1,9 @@
 package binaryTree
 
+import "fmt"
+
+//todo 层序遍历
+
 // 求二叉树的所有左节点值
 func sumOfLeft(root *TreeNode) int {
 	var ans int
@@ -55,5 +59,24 @@ func sumOfLeftLeaves(root *TreeNode) int {
 		}
 		ans += sum
 	}
+	return ans
+}
+
+// 深度遍历
+func sumOfLeftLeavesDepth(root *TreeNode) int {
+	ans := 0
+	var dfs func(*TreeNode)
+	dfs = func(node *TreeNode) {
+		if node == nil {
+			return
+		}
+		if node.Left != nil && node.Left.Left == nil && node.Left.Right == nil {
+			ans += node.Left.Val
+			fmt.Println(ans)
+		}
+		dfs(node.Left)
+		dfs(node.Right)
+	}
+	dfs(root)
 	return ans
 }
