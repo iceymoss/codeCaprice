@@ -29,6 +29,7 @@ func buildTree(inorder []int, postorder []int) *TreeNode {
 		//从中序遍历中找到一分为二的点，左边为左子树，右边为右子树
 		indexLeft := findIndex(tagPost, in)
 
+		//此时有一个很重要的点，就是中序数组大小一定是和后序数组的大小相同的（这是必然）
 		//post[:indexLeft],post[indexLeft:]将后续遍历一分为二，左边为左子树，右边为右子树
 		node.Left = build(in[:indexLeft], post[:indexLeft])
 		node.Right = build(in[indexLeft+1:], post[indexLeft:])
