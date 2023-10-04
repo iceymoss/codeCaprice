@@ -8,7 +8,6 @@ func insertIntoBST(root *TreeNode, val int) *TreeNode {
 				Val: val,
 			}
 		}
-
 		//如果当前节点值大于插入值
 		if node.Val > val {
 			node.Left = insert(node.Left, val)
