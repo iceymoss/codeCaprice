@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 //func foo(arg_val int) *int {
 //
 //	//var foo_val1 int = 11
@@ -44,25 +46,31 @@ func main() {
 	//data4 := []int{1, 3}
 	//data4[0] = 2
 
-	data := []interface{}{100, 200}
-	data[0] = 100
+	//data := []interface{}{100, 200}
+	//data[0] = 100
+	//
+	//data1 := make(map[string]interface{})
+	//data1["key"] = 200
+	//
+	//data2 := make(map[interface{}]interface{})
+	//data2[100] = 200
+	//
+	//data3 := make(map[string][]string)
+	//data3["key"] = []string{"value"}
+	//
+	//a := 10
+	//data4 := []*int{nil}
+	//data4[0] = &a
+	//
+	//data5 := 10
+	//f := foo
+	//f(&data5)
 
-	data1 := make(map[string]interface{})
-	data1["key"] = 200
+	s := "1234"
+	for _, v := range s {
+		fmt.Println(v - 48)
+	}
 
-	data2 := make(map[interface{}]interface{})
-	data2[100] = 200
-
-	data3 := make(map[string][]string)
-	data3["key"] = []string{"value"}
-
-	a := 10
-	data4 := []*int{nil}
-	data4[0] = &a
-
-	data5 := 10
-	f := foo
-	f(&data5)
 }
 
 func foo(a *int) {
