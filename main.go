@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+	"strings"
+)
 
 //func foo(arg_val int) *int {
 //
@@ -66,10 +70,21 @@ func main() {
 	//f := foo
 	//f(&data5)
 
-	s := "1234"
-	for _, v := range s {
-		fmt.Println(v - 48)
+	//s := "1234"
+	//for _, v := range s {
+	//	fmt.Println(v - 48)
+	//}
+
+	fmt.Println(strings.Join([]string{"127", "0", "0", "1"}, "."))
+	str := "023"
+	d, err := strconv.Atoi(str)
+	if err != nil {
+		fmt.Println(err)
 	}
+	if len(str) != len(strconv.Itoa(d)) {
+		fmt.Printf("str不合法:%s\n", strconv.Itoa(d))
+	}
+	fmt.Println(":", d)
 
 }
 
