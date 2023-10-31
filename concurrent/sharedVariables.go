@@ -5,6 +5,8 @@ import (
 	"sync"
 )
 
+//互斥锁：创建一个共享的整数变量，并启动多个 Goroutine 来递增该变量。使用互斥锁（sync.Mutex）来确保每个 Goroutine 修改变量时不会发生竞争条件。
+
 func shareValue() {
 	var value int
 	wg := &sync.WaitGroup{}
