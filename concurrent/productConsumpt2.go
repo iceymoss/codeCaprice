@@ -58,3 +58,15 @@ func productConsume3() {
 
 	wg.Wait()
 }
+
+func rervire(array []int, begin, end int) []int {
+	if begin >= end || begin < 0 || end >= len(array) {
+		return array
+	}
+	for begin < end {
+		array[begin], array[end] = array[end], array[begin]
+		begin++
+		end--
+	}
+	return array
+}
