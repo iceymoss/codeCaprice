@@ -1,7 +1,7 @@
 package main
 
 import (
-	bk "codeCaprice/backTracking"
+	"codeCaprice/backTracking"
 	"fmt"
 )
 
@@ -19,9 +19,10 @@ func main() {
 	//s4[0] = 100
 	//fmt.Println(s3) // [100 0 6 6 6 0 0 0 0 0]
 	//fmt.Println(s4) // [100 0 6 6 6 0 0 0 0 0]
-	arr := []int{2, 3, 5}
-	bk.CombinationSum(arr, 8)
-
+	//arr := []int{2, 3, 5}
+	//bk.CombinationSum(arr, 8)
+	//fmt.Println(strconv.Itoa(-1))
+	backTracking.SubsetsWithDup([]int{1, 1, 2, 2})
 }
 func Test2(s *[]int) {
 	*s = append(*s, 6)
