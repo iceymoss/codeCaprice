@@ -15,11 +15,6 @@ func main() {
 		fmt.Scan(&index)
 		inds[i] = index
 	}
-	fmt.Println(n)
-	fmt.Println(q)
-	fmt.Println(str)
-	fmt.Println(inds)
-	fmt.Println()
 
 	t := str
 	bt := []byte(str)
