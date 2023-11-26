@@ -19,7 +19,7 @@ Goroutine 并发计算：编写一个程序，启动多个 Goroutine 来计算�
 */
 
 func main() {
-	chanSquare()
+	//chanSquare()
 	//mutexSquare([]int{1, 2, 4, 5, 6, 7, 7})
 	//
 	//shareValue()
@@ -31,4 +31,5 @@ func main() {
 	//productConsume3()
 
 	//manyJobs()
+	productConsume3()
 }
