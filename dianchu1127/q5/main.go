@@ -40,10 +40,10 @@ func (s *NYStylePizzaStore) OrderPizza(pizzaType string) Pizza {
 		pizza = &NYStyleCheesePizza{}
 	case "veggie":
 		pizza = &NYStyleVeggiePizza{}
-	case "clam":
-		pizza = &NYStyleClamPizza{}
-	case "pepperoni":
-		pizza = &NYStylePepperoniPizza{}
+	//case "clam":
+	//	pizza = &NYStyleClamPizza{}
+	//case "pepperoni":
+	//	pizza = &NYStylePepperoniPizza{}
 	default:
 		fmt.Println("不支持的比萨类型")
 		return nil
