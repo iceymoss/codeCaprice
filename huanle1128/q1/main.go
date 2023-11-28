@@ -21,5 +21,4 @@ func BubbleSort(arr []int, sortRule bool) []int {
 func main() {
 	nums := []int{2, 3, 6, 1, 96, 13, 54}
 	fmt.Println(BubbleSort(nums, false))
-
 }
