@@ -16,6 +16,7 @@ func main() {
 	// 创建 Redis 客户端连接
 	client := redis.NewClient(&redis.Options{
 		Addr: "127.0.0.1:6379", // Redis 服务器地址
+		DB:   0,                // 默认数据库
 	})
 
 	// 关闭连接
